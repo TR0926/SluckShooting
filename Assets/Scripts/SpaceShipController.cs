@@ -34,7 +34,7 @@ public class SpaceShipController : MonoBehaviour
         m_rb.velocity = dir * m_moveSpeed;        // 単位ベクトルにスピードをかけて速度ベクトルにして、それを Rigidbody の速度ベクトルとしてセットする
 
         // 左クリックまたは左 Ctrl で弾を発射する（単発）
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (m_bulletLimit == 0 || this.GetComponentsInChildren<PlayerBulletController>().Length < m_bulletLimit)    // 画面内の弾数を制限する
             {
@@ -54,16 +54,7 @@ public class SpaceShipController : MonoBehaviour
         {
             GameObject go = Instantiate(m_bulletPrefab, m_muzzle.position, m_bulletPrefab.transform.rotation);  // インスペクターから設定した m_bulletPrefab をインスタンス化する
             go.transform.SetParent(this.transform);
-            m_anim.Play("PlayerFire");    // Animator Controller 内の State 名を指定して Motion を再生する
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.GetComponent<EnemyController>())
-        {
-            Debug.Log("!");
-            m_anim.Play("Player");
+            m_anim.Play("Fire");    // Animator Controller 内の State 名を指定して Motion を再生する
         }
     }
 }
