@@ -7,16 +7,8 @@ using UnityEngine;
 /// </summary>
 public class EnemyController : MonoBehaviour
 {
-    public AudioClip sound;
-    AudioSource audioSouce;
-
-    private void Start()
-    {
-        audioSouce = GetComponent<AudioSource>();
-    }
     void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.GetComponent<PlayerBulletController>())  // 衝突相手が 弾 だったら
         {
             Destroy(collision.gameObject);  // 弾のオブジェクトを破棄する

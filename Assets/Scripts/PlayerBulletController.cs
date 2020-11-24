@@ -21,12 +21,4 @@ public class PlayerBulletController : MonoBehaviour
         Vector3 v = m_direction.normalized * m_bulletSpeed; // 弾が飛ぶ速度ベクトルを計算する
         m_rb.velocity = v;                                  // 速度ベクトルを弾にセットする
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject)
-        {
-            Debug.Log("!");
-        }
-    }
 }

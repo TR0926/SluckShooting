@@ -17,10 +17,12 @@ public class SpaceShipController : MonoBehaviour
     /// <summary>一画面の最大段数 (0 = 無制限)</summary>
     [SerializeField, Range(0, 10)] int m_bulletLimit = 0;
     Rigidbody2D m_rb;
+    Animator m_anim;
 
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
+        m_anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,22 +36,13 @@ public class SpaceShipController : MonoBehaviour
         // 左クリックまたは左 Ctrl で弾を発射する（単発）
         if (Input.GetButton("Fire1"))
         {
-
             if (m_bulletLimit == 0 || this.GetComponentsInChildren<PlayerBulletController>().Length < m_bulletLimit)    // 画面内の弾数を制限する
             {
                 Fire1();
-
             }
         }
 
-        if (Input.GetButton("Fire2"))
-        {
-
-            if (m_bulletLimit == 0 || this.GetComponentsInChildren<PlayerBulletController>().Length < m_bulletLimit)
-            {
-                Fire1();
-            }
-        }
+        // 課題: ここに右クリックまたは左 Alt (Fire2) で弾を発射するようコードを追加せよ
     }
 
     /// <summary>
@@ -61,6 +54,16 @@ public class SpaceShipController : MonoBehaviour
         {
             GameObject go = Instantiate(m_bulletPrefab, m_muzzle.position, m_bulletPrefab.transform.rotation);  // インスペクターから設定した m_bulletPrefab をインスタンス化する
             go.transform.SetParent(this.transform);
+            m_anim.Play("PlayerFire");    // Animator Controller 内の State 名を指定して Motion を再生する
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.GetComponent<EnemyController>())
+        {
+            Debug.Log("!");
+            m_anim.Play("Player");
         }
     }
 }
