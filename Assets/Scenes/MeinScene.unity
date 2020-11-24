@@ -290,7 +290,8 @@ MonoBehaviour:
     type: 3}
   m_muzzle: {fileID: 1670426311}
   m_bulletLimit: 4
-  m_explosionEffect: {fileID: 0}
+  m_explosionEffect: {fileID: 7034021883086192910, guid: 09a8a9773df9d0749badf190c99c037c,
+    type: 3}
 --- !u!50 &340891601
 Rigidbody2D:
   serializedVersion: 4
@@ -692,6 +693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797244419}
   - component: {fileID: 1797244418}
+  - component: {fileID: 1797244420}
   m_Layer: 0
   m_Name: SpaceBackground
   m_TagString: Untagged
@@ -763,6 +765,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1797244420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797244417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc432bea2695af04298b31a9a45a0cd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2007413714
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007413716}
   - component: {fileID: 2007413715}
+  - component: {fileID: 2007413717}
   m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
@@ -787,12 +809,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007413714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e61d0db05c58c254982e68e657b79585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyPrefab: {fileID: 378552942956850385, guid: 00695b0e031f4fc4d9a8fc0c5d51b443,
+  m_enemyPrefab: {fileID: 3110341396331655359, guid: 7bdec4fae8159804d920eb7355b1a559,
     type: 3}
   m_interval: 1
 --- !u!4 &2007413716
@@ -809,6 +831,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2007413717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007413714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3580a91c3418894188225559b4d22cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyPrefabs:
+  - {fileID: 432907568731178893, guid: 657a8464d7c1b434481ead109c94cc21, type: 3}
+  - {fileID: 3864048589186649824, guid: a2757d4aa9b7dcb44ae0ec3f7c8c49c3, type: 3}
+  - {fileID: 7294474644988277595, guid: 4f38e0151b420604e9bc75918666ba6b, type: 3}
+  m_bossPrefab: {fileID: 3171148821423147242, guid: 77c4c9386ca86c344b9b7417ed50efae,
+    type: 3}
+  m_spawnPoint: {fileID: 2007413716}
+  m_spawnIntervalInWave: 5
+  m_spawnTimesInWave: 2
 --- !u!1 &2055855412
 GameObject:
   m_ObjectHideFlags: 0

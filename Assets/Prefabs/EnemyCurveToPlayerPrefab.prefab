@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee60811c9570fa4f83b342547675243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 1
+  m_speed: 3
   m_playerOffsetY: 5
   m_chasingPower: 1
 --- !u!1001 &5212715010541060686
@@ -22,15 +22,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3110341396331655352, guid: 7bdec4fae8159804d920eb7355b1a559,
+        type: 3}
+      propertyPath: m_fireInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.156497
+      value: -0.921901
       objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.42579603
+      value: 5.652281
       objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
@@ -40,17 +45,17 @@ PrefabInstance:
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3110341396331655356, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
@@ -80,9 +85,11 @@ PrefabInstance:
     - target: {fileID: 3110341396331655359, guid: 7bdec4fae8159804d920eb7355b1a559,
         type: 3}
       propertyPath: m_Name
-      value: EnemyPrefab
+      value: EnemyCurveToPlayerPrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3110341396331655354, guid: 7bdec4fae8159804d920eb7355b1a559, type: 3}
+    - {fileID: 717798033, guid: 7bdec4fae8159804d920eb7355b1a559, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7bdec4fae8159804d920eb7355b1a559, type: 3}
 --- !u!1 &7169008959325467377 stripped
 GameObject:

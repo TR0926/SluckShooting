@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2613607370886633654}
   m_Layer: 0
   m_Name: EnemyWaveDownPrefab
-  m_TagString: Untagged
+  m_TagString: EnemyTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_life: 1
   m_enemyBulletPrefab: {fileID: 7269278492506710378, guid: 764a0aaa48cccd74a8cd8f99188dccd1,
     type: 3}
-  m_fireInterval: 1
+  m_fireInterval: 4
   m_muzzles: []
   m_explosionPrefab: {fileID: 7034021883086192910, guid: 09a8a9773df9d0749badf190c99c037c,
     type: 3}
