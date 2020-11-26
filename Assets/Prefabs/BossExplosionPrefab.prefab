@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4166540829637724415}
   - component: {fileID: 4166540829637724412}
   - component: {fileID: 4166540829637724413}
+  - component: {fileID: 3797204640153997626}
   m_Layer: 0
   m_Name: BossExplosionPrefab
   m_TagString: Untagged
@@ -177,6 +178,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3797204640153997626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166540829637724410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24c094d3954ae54b8ce641ded126e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneNameToBeLoaded: Title
 --- !u!1001 &4166540828917394660
 PrefabInstance:
   m_ObjectHideFlags: 0
